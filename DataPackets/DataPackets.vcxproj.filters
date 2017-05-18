@@ -64,7 +64,4 @@
       <UniqueIdentifier>{b75f7695-876a-4a90-bfa4-ff34e3f399ff}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Readme.md" />
-  </ItemGroup>
 </Project>
