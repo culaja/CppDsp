@@ -8,6 +8,8 @@ class MutexGuard {
 public:
 	MutexGuard(IAmMutex& mutex);
 	~MutexGuard();
+private:
+	MutexGuard(const MutexGuard&);
 };
 
 #endif

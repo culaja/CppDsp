@@ -6,7 +6,7 @@ PacketQueue::PacketQueue(IAmMutex& mutex, IAmAutoResetEvent& autoResetEvent): _m
 }
 
 void PacketQueue::Push(const Packet& packet) {
-	MutexGuard guard = MutexGuard(_mutex);
+	MutexGuard& guard = MutexGuard(_mutex);
 
 	for (int i = 0; i < packet.GetSize(); ++i) {
 		_queue.push(packet[i]);
@@ -21,7 +21,7 @@ Packet PacketQueue::WaitForPacketOfSize(int packetSize) {
 	while (resultBuffer.size() < packetSize) {
 		bool waitForTheQueue = false;
 		{
-			MutexGuard guard = MutexGuard(_mutex);
+			MutexGuard& guard = MutexGuard(_mutex);
 			if (_queue.size() > 0)
 			{
 				resultBuffer.push_back(_queue.front());

@@ -8,9 +8,14 @@ class StandardMutex : public IAmMutex {
 private:
 	std::mutex _mutex;
 public:
+	StandardMutex() {}
+
 	void Lock();
 
 	void Unlock();
+
+private:
+	StandardMutex(const StandardMutex&);
 };
 
 #endif

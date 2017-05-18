@@ -16,7 +16,7 @@ void producerWorker(PacketQueue* packetQueuePointer) {
 
 	IAmPacketGenerator& packetGenerator = FloatNumberSequenceGenerator(MAXIMAL_INPUT_PACKET_SIZE);
 	for (;;) {
-		Packet& packet = packetGenerator.GenerateRandomLength();
+		const Packet& packet = packetGenerator.GenerateRandomLength();
 		packetQueue.Push(packet);
 
 		Sleep(1000);
@@ -28,7 +28,7 @@ void consumerWorker(PacketQueue* packetQueuePointer) {
 
 	IAmPacketProcessor& packetProcessor = SimpleOutputPacketProcessor();
 	for (;;) {
-		Packet& packet = packetQueue.WaitForPacketOfSize(FIXED_PACKET_SIZE);
+		Packet packet = packetQueue.WaitForPacketOfSize(FIXED_PACKET_SIZE);
 		packetProcessor.Process(packet);
 	}
 }

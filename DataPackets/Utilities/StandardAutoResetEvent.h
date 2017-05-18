@@ -6,13 +6,19 @@
 #include <condition_variable>
 
 class StandardAutoResetEvent : public IAmAutoResetEvent {
-public:
-	void Set();
-	void Wait();
 private:
 	bool _flag = false;
 	std::mutex _mutex;
 	std::condition_variable _signal;
+
+public:
+	StandardAutoResetEvent() {}
+
+	void Set();
+	void Wait();
+
+private:
+	StandardAutoResetEvent(const StandardAutoResetEvent&);
 };
 
 #endif

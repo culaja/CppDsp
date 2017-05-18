@@ -4,13 +4,17 @@
 #include "IAmPacketGenerator.h"
 
 class FloatNumberSequenceGenerator : public IAmPacketGenerator {
-public:
-	FloatNumberSequenceGenerator(size_t maximalPacketSize);
-	Packet GenerateRandomLength();
-
 private:
 	int _maximalPacketSize;
 	int _maximalNumberSize;
+
+public:
+	FloatNumberSequenceGenerator(size_t maximalPacketSize);
+
+	Packet GenerateRandomLength();
+
+private:
+	FloatNumberSequenceGenerator(const FloatNumberSequenceGenerator&);
 
 	int GenerateRandomIntegerWithLimit(int limit);
 	float GenerateRandomFloatWithLimit(int limit);

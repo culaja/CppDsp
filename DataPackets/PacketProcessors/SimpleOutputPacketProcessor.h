@@ -5,7 +5,12 @@
 
 class SimpleOutputPacketProcessor : public IAmPacketProcessor {
 public:
+	SimpleOutputPacketProcessor() {}
+
 	void Process(const Packet& packet);
+
+private:
+	SimpleOutputPacketProcessor(const SimpleOutputPacketProcessor&);
 };
 
 #endif
