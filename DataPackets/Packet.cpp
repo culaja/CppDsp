@@ -13,3 +13,7 @@ Packet::Packet(const std::vector<float>& buffer) {
 size_t Packet::GetSize() const {
 	return _buffer.size();
 }
+
+const std::vector<float> Packet::GetBuffer() const {
+	return _buffer;
+}

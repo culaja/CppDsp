@@ -1,13 +1,13 @@
 #ifndef PACKET_QUEUE
 #define PACKET_QUEUE
 
-#include <vector>
+#include <queue>
 #include "Packet.h"
 #include "IAmMutex.h"
 
 class PacketQueue {
 private:
-	std::vector<Packet> _queue;
+	std::queue<float> _queue;
 	IAmMutex& _mutex;
 public:
 	PacketQueue(IAmMutex& mutex);
