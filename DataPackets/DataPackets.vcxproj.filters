@@ -20,6 +20,9 @@
       <Filter>PacketProcessors</Filter>
     </ClCompile>
     <ClCompile Include="MainTestHarness.cpp" />
+    <ClCompile Include="UnitTests\PacketQueueTests.cpp">
+      <Filter>UnitTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Packet.h" />
@@ -52,6 +55,9 @@
       <Filter>PacketProcessors</Filter>
     </ClInclude>
     <ClInclude Include="MainTestHarness.h" />
+    <ClInclude Include="UnitTests\PacketQueueTests.h">
+      <Filter>UnitTests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">
@@ -62,6 +68,9 @@
     </Filter>
     <Filter Include="PacketProcessors">
       <UniqueIdentifier>{b75f7695-876a-4a90-bfa4-ff34e3f399ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitTests">
+      <UniqueIdentifier>{8c6a2df9-fa29-422d-a41b-7a02243c2e2a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

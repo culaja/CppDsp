@@ -1,8 +1,10 @@
 #include <iostream>
 #include <cpptest.h>
-#include "MainTestHarness.h"
 
-#define RUN_MAIN_TEST_HARNESS // Comment this line if you want to run unit tests, otherwise this will trigger MainTestHarness to execute
+#include "MainTestHarness.h"
+#include "UnitTests/PacketQueueTests.h"
+
+//#define RUN_MAIN_TEST_HARNESS // Comment this line if you want to run unit tests, otherwise this will trigger MainTestHarness to execute
 
 using namespace std;
 
@@ -63,6 +65,7 @@ int run_tests(int argc, char* argv[]) {
 		// Demonstrates the ability to use multiple test suites
 		//
 		Test::Suite ts;
+		ts.add(auto_ptr<Test::Suite>(new PacketQueueTests));
 
 		// Run the tests
 		//

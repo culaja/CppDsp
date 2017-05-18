@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="MainTestHarness.h" />
+    <ClInclude Include="UnitTests\PacketQueueTests.h" />
     <ClInclude Include="Utilities\IAmAutoResetEvent.h" />
     <ClInclude Include="Utilities\IAmMutex.h" />
     <ClInclude Include="Utilities\MutexGuard.h" />
@@ -135,6 +136,7 @@
     <ClCompile Include="MainTestHarness.cpp" />
     <ClCompile Include="PacketGenerators\FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="UnitTests\PacketQueueTests.cpp" />
     <ClCompile Include="Utilities\MutexGuard.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="PacketQueue.cpp" />
