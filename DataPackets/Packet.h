@@ -5,7 +5,7 @@
 
 /*
 	Each Packet contains zero or more float numbers.
-	In current implementation Packet is imutable class meaning that
+	In current implementation Packet is immutable class meaning that
 	once object is created it can't be modified.
 */
 class Packet {

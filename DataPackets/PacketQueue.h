@@ -19,6 +19,9 @@ public:
 
 private:
 	PacketQueue(const PacketQueue& that);
+
+	void WaitForItemsInQueue();
+	void FillResultBufferFromQueue(std::vector<float>& resultBuffer, int& remainingItems);
 };
 
 #endif

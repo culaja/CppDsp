@@ -8,7 +8,7 @@ PacketQueue::PacketQueue(IAmMutex& mutex, IAmAutoResetEvent& autoResetEvent): _m
 void PacketQueue::Push(const Packet& packet) {
 	MutexGuard guard(_mutex);
 
-	for (int i = 0; i < packet.GetSize(); ++i) {
+	for (size_t i = 0; i < packet.GetSize(); ++i) {
 		_queue.push(packet[i]);
 	}
 
@@ -17,25 +17,34 @@ void PacketQueue::Push(const Packet& packet) {
 
 Packet PacketQueue::WaitForPacketOfSize(int packetSize) {
 	std::vector<float> resultBuffer;
+	int remainingItems = packetSize;
 
-	while (resultBuffer.size() < packetSize) {
-		bool waitForTheQueue = false;
-		{
-			MutexGuard guard(_mutex);
-			if (_queue.size() > 0)
-			{
-				resultBuffer.push_back(_queue.front());
-				_queue.pop();
-			}
-			else {
-				waitForTheQueue = true;
-			}
-		}
-
-		if (waitForTheQueue) {
-			_autoResetEvent.Wait();
-		}
+	while (remainingItems > 0) {
+		WaitForItemsInQueue();
+		FillResultBufferFromQueue(resultBuffer, remainingItems);
 	}
 
 	return Packet(resultBuffer);
+}
+
+void PacketQueue::WaitForItemsInQueue() {
+	bool isQueueEmpty = false;
+	{
+		MutexGuard guard(_mutex);
+		isQueueEmpty = _queue.size() == 0;
+	}
+	
+	if (isQueueEmpty) {
+		_autoResetEvent.Wait();
+	}
+}
+
+void PacketQueue::FillResultBufferFromQueue(std::vector<float>& resultBuffer, int& remainingItems) {
+	MutexGuard guard(_mutex);
+
+	while (_queue.size() > 0 && remainingItems > 0) {
+		resultBuffer.push_back(_queue.front());
+		_queue.pop();
+		remainingItems--;
+	}
 }
