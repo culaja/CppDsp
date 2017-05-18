@@ -9,6 +9,8 @@ private:
 
 public:
 	Packet(const std::vector<float>& buffer);
+
+	size_t GetSize() const;
 };
 
 #endif

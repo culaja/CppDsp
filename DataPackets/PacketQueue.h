@@ -8,9 +8,14 @@
 class PacketQueue {
 private:
 	std::vector<Packet> _queue;
-	IAmMutex _mutex;
+	IAmMutex& _mutex;
 public:
-	
+	PacketQueue(IAmMutex& mutex);
+
+	void Push(const Packet& packet);
+	Packet WaitForPacketOfSize(int packetSize);
+
+private:
 };
 
 #endif

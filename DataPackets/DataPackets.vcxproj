@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="IAmAutoResetEvent.h" />
     <ClInclude Include="IAmMutex.h" />
     <ClInclude Include="MutexGuard.h" />
     <ClInclude Include="Packet.h" />
@@ -127,6 +128,7 @@
     <ClInclude Include="PacketQueue.h" />
     <ClInclude Include="PacketSizeNotAlignedWithFloatException.h" />
     <ClInclude Include="SimpleOutputPacketProcessor.h" />
+    <ClInclude Include="StandardAutoResetEvent.h" />
     <ClInclude Include="StandardMutex.h" />
   </ItemGroup>
   <ItemGroup>
@@ -134,7 +136,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MutexGuard.cpp" />
     <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="PacketQueue.cpp" />
     <ClCompile Include="SimpleOutputPacketProcessor.cpp" />
+    <ClCompile Include="StandardAutoResetEvent.cpp" />
     <ClCompile Include="StandardMutex.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
