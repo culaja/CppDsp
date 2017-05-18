@@ -25,6 +25,12 @@
     <Filter Include="Source Files\PacketProcessors">
       <UniqueIdentifier>{6fdda04f-cbe3-47f0-82df-e61ccc2f9ea9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{7d54dbcb-36f2-48ad-938f-6a0d89c9b814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{4244f1db-10ee-496b-ba30-630a19057f92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Packet.h">
@@ -45,6 +51,18 @@
     <ClInclude Include="PacketSizeNotAlignedWithFloatException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PacketQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IAmMutex.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardMutex.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="MutexGuard.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -58,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="Packet.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardMutex.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="MutexGuard.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

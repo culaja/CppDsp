@@ -118,18 +118,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="IAmMutex.h" />
+    <ClInclude Include="MutexGuard.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="FloatNumberSequenceGenerator.h" />
     <ClInclude Include="IAmPacketGenerator.h" />
     <ClInclude Include="IAmPacketProcessor.h" />
+    <ClInclude Include="PacketQueue.h" />
     <ClInclude Include="PacketSizeNotAlignedWithFloatException.h" />
     <ClInclude Include="SimpleOutputPacketProcessor.h" />
+    <ClInclude Include="StandardMutex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MutexGuard.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="SimpleOutputPacketProcessor.cpp" />
+    <ClCompile Include="StandardMutex.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
