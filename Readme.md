@@ -32,5 +32,8 @@ This is just a proof of concept example and the solution can be further improved
 - Solution can be completely rewritten using TDD approach. I think different design would emerge because some tests can be easier implemented with simpler design. I didn't use TDD since I'm not fluent in C++ right now. I would also follow the "functional core, imperative shell" approach that would for sure provide better testing of business logic. (link: https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell).
 - I forgot to put all classes to appropriate namespaces. So this can be also improved.
 
+# Unit Tests
+To execute unit tests you need to comment "#define RUN_MAIN_TEST_HARNESS" line in main.cpp file. I implemented just two unit tests as a proof of concept (with mocking mutex and event). I could use some mocking framework (like Google implementation of cpp mocking framework) but that would be overkill. Once again TDD would drive me to better code design if I followed TDD rules. There would also be more tests. 
+
 # Conclusion
 Priority of this solution was to have better code design. I wanted to show how some design principles and patterns can be used to enable unit testing and easier maintainability (SOLID principles). Unfortunately, this has deteriorated performances (I didn't measure them but current solution can't be fast). If we need better performances then we need different approach that would deteriorate code design (less object creating, bulk copying, etc.). But I choose better design because I didn't had any non-functional requirements that would exactly tell me about needed performances.

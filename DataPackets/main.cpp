@@ -4,7 +4,7 @@
 #include "MainTestHarness.h"
 #include "UnitTests/PacketQueueTests.h"
 
-//#define RUN_MAIN_TEST_HARNESS // Comment this line if you want to run unit tests, otherwise this will trigger MainTestHarness to execute
+#define RUN_MAIN_TEST_HARNESS // Comment this line if you want to run unit tests, otherwise this will trigger MainTestHarness to execute
 
 using namespace std;
 
