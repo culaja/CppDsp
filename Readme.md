@@ -12,7 +12,7 @@ System consists of three fundamental components:
     - Consumer - Thread that waits for fixed length packet from the PacketQueue and dispatches the packet to the PacketProcessor
  
 Component collaboration is presented in picture below:
-[logo]: Architecture.png "Architecture picture"
+![alt text](https://github.com/culaja/CppDsp/blob/master/Architecture.png)
 
 # Design
     Text goes here.
