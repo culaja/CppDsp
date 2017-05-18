@@ -9,16 +9,16 @@ FloatNumberSequenceGenerator::FloatNumberSequenceGenerator() {
 	_maximalNumberSize = 10;
 }
 
-std::vector<float> FloatNumberSequenceGenerator::GenerateRandomLength() {
+Packet FloatNumberSequenceGenerator::GenerateRandomLength() {
 	int packetSize = GenerateRandomIntegerWithLimit(_maximalPacketSize);
 
-	std::vector<float> newPacket;
+	std::vector<float> packetBuffer;
 	for (int i = 0; i < packetSize; ++i) {
 		float newFloat = GenerateRandomFloatWithLimit(_maximalNumberSize);
-		newPacket.push_back(newFloat);
+		packetBuffer.push_back(newFloat);
 	}
 
-	return newPacket;
+	return Packet(packetBuffer);
 }
 
 int FloatNumberSequenceGenerator::GenerateRandomIntegerWithLimit(int limit) {

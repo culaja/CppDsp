@@ -6,7 +6,7 @@
 class FloatNumberSequenceGenerator : IAmPacketGenerator {
 public:
 	FloatNumberSequenceGenerator();
-	std::vector<float> GenerateRandomLength();
+	Packet GenerateRandomLength();
 
 private:
 	int _maximalPacketSize;
