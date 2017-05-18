@@ -3,9 +3,9 @@
 
 #include "IAmPacketGenerator.h"
 
-class FloatNumberSequenceGenerator : IAmPacketGenerator {
+class FloatNumberSequenceGenerator : public IAmPacketGenerator {
 public:
-	FloatNumberSequenceGenerator();
+	FloatNumberSequenceGenerator(size_t maximalPacketSize);
 	Packet GenerateRandomLength();
 
 private:

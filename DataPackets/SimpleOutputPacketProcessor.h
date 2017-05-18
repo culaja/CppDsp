@@ -3,7 +3,7 @@
 
 #include "IAmPacketProcessor.h"
 
-class SimpleOutputPacketProcessor : IAmPacketProcessor {
+class SimpleOutputPacketProcessor : public IAmPacketProcessor {
 public:
 	void Process(const Packet& packet);
 };

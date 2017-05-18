@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ConsumerProducerTest.h" />
     <ClInclude Include="IAmAutoResetEvent.h" />
     <ClInclude Include="IAmMutex.h" />
     <ClInclude Include="MutexGuard.h" />
@@ -132,6 +133,7 @@
     <ClInclude Include="StandardMutex.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConsumerProducerTest.cpp" />
     <ClCompile Include="FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MutexGuard.cpp" />

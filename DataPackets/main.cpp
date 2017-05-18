@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cpptest.h>
+#include "ConsumerProducerTest.h"
+
+#define RUN_MAIN_TEST
 
 using namespace std;
 
@@ -54,11 +57,7 @@ cmdline(int argc, char* argv[])
 	return auto_ptr<Test::Output>(output);
 }
 
-// Main test program
-//
-int
-main(int argc, char* argv[])
-{
+int run_tests(int argc, char* argv[]) {
 	try
 	{
 		// Demonstrates the ability to use multiple test suites
@@ -80,4 +79,17 @@ main(int argc, char* argv[])
 		return EXIT_FAILURE;
 	}
 	return EXIT_SUCCESS;
+}
+
+// Main test program
+//
+int
+main(int argc, char* argv[])
+{
+#ifdef RUN_MAIN_TEST
+	ConsumerProducerTest test = ConsumerProducerTest();
+	return test.Run(argc, argv);
+#else
+	return run_tests(argc, argv);
+#endif
 }

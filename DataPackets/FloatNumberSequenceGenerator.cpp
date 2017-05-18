@@ -3,10 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-FloatNumberSequenceGenerator::FloatNumberSequenceGenerator() {
-	srand(time(NULL));
-	_maximalPacketSize = 100;
-	_maximalNumberSize = 10;
+FloatNumberSequenceGenerator::FloatNumberSequenceGenerator(size_t maximalPacketSize): _maximalPacketSize(maximalPacketSize), _maximalNumberSize(10) {
+	srand((unsigned int)time(NULL));
 }
 
 Packet FloatNumberSequenceGenerator::GenerateRandomLength() {

@@ -4,7 +4,7 @@
 #include "IAmMutex.h"
 #include <mutex>
 
-class StandardMutex : IAmMutex {
+class StandardMutex : public IAmMutex {
 private:
 	std::mutex _mutex;
 public:
