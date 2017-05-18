@@ -19,7 +19,7 @@ Some of the classes can be seen from Architecture picture. I've tried to follow 
 
 Main business logic of the application is in PacketQueue class. There is placed entire logic around packet buffering and logic around eventing (producer have to send notification to the consumer to avoid unnecessary polling).
 
-Application entry point is in MainTestHarness class that creates producer and consumer threads and binds them with the one and only PacketQueue object. It is nice to mention that IOC (Inversion of Control) design principle is used when PacketQueue object is created. This class can be further refactored and core business logic can be moved to separate class, but this is enough for a proof of concept solution.
+Application entry point is in MainTestHarness class that creates producer and consumer threads and binds them with the one and only PacketQueue object. It is nice to mention that IOC (Inversion of Control) design principle is used when PacketQueue object is created (here we can easily replace the generator or processor by using another implementation or we can say another strategy). This class can be further refactored and core business logic can be moved to separate class, but this is enough for a proof of concept solution.
 
 In order to implement Producer/Consumer concept we must have some kind of synchronization between the threads, thus I introduced utility classes for Mutex and Event (just a wrapper around cpp 14 std classes).
 
