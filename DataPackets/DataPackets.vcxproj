@@ -118,11 +118,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ComplexNumberSequenceGenerator.h" />
+    <ClInclude Include="FloatNumberSequenceGenerator.h" />
     <ClInclude Include="IAmPacketGenerator.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ComplexNumberSequenceGenerator.cpp" />
+    <ClCompile Include="FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
