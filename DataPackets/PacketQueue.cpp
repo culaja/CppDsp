@@ -1,6 +1,6 @@
 #include "PacketQueue.h"
 
-#include "MutexGuard.h"
+#include "Utilities/MutexGuard.h"
 
 PacketQueue::PacketQueue(IAmMutex& mutex, IAmAutoResetEvent& autoResetEvent): _mutex(mutex), _autoResetEvent(autoResetEvent) {
 }

@@ -119,28 +119,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ConsumerProducerTest.h" />
-    <ClInclude Include="IAmAutoResetEvent.h" />
-    <ClInclude Include="IAmMutex.h" />
-    <ClInclude Include="MutexGuard.h" />
+    <ClInclude Include="Utilities\IAmAutoResetEvent.h" />
+    <ClInclude Include="Utilities\IAmMutex.h" />
+    <ClInclude Include="Utilities\MutexGuard.h" />
     <ClInclude Include="Packet.h" />
-    <ClInclude Include="FloatNumberSequenceGenerator.h" />
-    <ClInclude Include="IAmPacketGenerator.h" />
-    <ClInclude Include="IAmPacketProcessor.h" />
+    <ClInclude Include="PacketGenerators\FloatNumberSequenceGenerator.h" />
+    <ClInclude Include="PacketGenerators\IAmPacketGenerator.h" />
+    <ClInclude Include="PacketProcessors\IAmPacketProcessor.h" />
     <ClInclude Include="PacketQueue.h" />
-    <ClInclude Include="SimpleOutputPacketProcessor.h" />
-    <ClInclude Include="StandardAutoResetEvent.h" />
-    <ClInclude Include="StandardMutex.h" />
+    <ClInclude Include="PacketProcessors\SimpleOutputPacketProcessor.h" />
+    <ClInclude Include="Utilities\StandardAutoResetEvent.h" />
+    <ClInclude Include="Utilities\StandardMutex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsumerProducerTest.cpp" />
-    <ClCompile Include="FloatNumberSequenceGenerator.cpp" />
+    <ClCompile Include="PacketGenerators\FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MutexGuard.cpp" />
+    <ClCompile Include="Utilities\MutexGuard.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="PacketQueue.cpp" />
-    <ClCompile Include="SimpleOutputPacketProcessor.cpp" />
-    <ClCompile Include="StandardAutoResetEvent.cpp" />
-    <ClCompile Include="StandardMutex.cpp" />
+    <ClCompile Include="PacketProcessors\SimpleOutputPacketProcessor.cpp" />
+    <ClCompile Include="Utilities\StandardAutoResetEvent.cpp" />
+    <ClCompile Include="Utilities\StandardMutex.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

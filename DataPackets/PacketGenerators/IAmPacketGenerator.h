@@ -1,7 +1,7 @@
 #ifndef I_AM_PACKET_GENERATOR
 #define I_AM_PACKET_GENERATOR
 
-#include "Packet.h"
+#include "../Packet.h"
 
 class IAmPacketGenerator {
 public:

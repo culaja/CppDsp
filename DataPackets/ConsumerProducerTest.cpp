@@ -1,10 +1,10 @@
 #include "ConsumerProducerTest.h"
 
 #include "PacketQueue.h"
-#include "StandardMutex.h"
-#include "StandardAutoResetEvent.h"
-#include "FloatNumberSequenceGenerator.h"
-#include "SimpleOutputPacketProcessor.h"
+#include "Utilities/StandardMutex.h"
+#include "Utilities/StandardAutoResetEvent.h"
+#include "PacketGenerators/FloatNumberSequenceGenerator.h"
+#include "PacketProcessors/SimpleOutputPacketProcessor.h"
 #include <thread>
 #include <windows.h>
 

@@ -3,8 +3,8 @@
 
 #include <queue>
 #include "Packet.h"
-#include "IAmMutex.h"
-#include "IAmAutoResetEvent.h"
+#include "Utilities/IAmMutex.h"
+#include "Utilities/IAmAutoResetEvent.h"
 
 class PacketQueue {
 private:

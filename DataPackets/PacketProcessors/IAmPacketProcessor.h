@@ -1,7 +1,7 @@
 #ifndef I_AM_PACKET_PROCESSOR
 #define I_AM_PACKET_PROCESSOR
 
-#include "Packet.h"
+#include "../Packet.h"
 
 class IAmPacketProcessor {
 public:

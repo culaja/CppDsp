@@ -1,7 +1,5 @@
 #include "Packet.h"
 
-#include "PacketSizeNotAlignedWithFloatException.h"
-
 Packet::Packet(const std::vector<float>& buffer) {
 	_buffer = buffer;
 }

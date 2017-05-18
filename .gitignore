@@ -288,5 +288,5 @@ __pycache__/
 *.xsd.cs
 
 # My addition
-!Libs\cpptest-1.1.2\win\VisualStudio.NET\cpptest\Debug\cpptest.lib
-!Libs\cpptest-1.1.2\win\VisualStudio.NET\cpptest\Debug\cpptest.pdb
+!Libs/cpptest-1.1.2/win/VisualStudio.NET/cpptest/Debug/cpptest.lib
+!Libs/cpptest-1.1.2/win/VisualStudio.NET/cpptest/Debug/cpptest.pdb
