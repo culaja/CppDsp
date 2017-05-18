@@ -48,9 +48,6 @@
     <ClInclude Include="IAmPacketGenerator.h">
       <Filter>Header Files\PacketGenerators</Filter>
     </ClInclude>
-    <ClInclude Include="PacketSizeNotAlignedWithFloatException.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PacketQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>

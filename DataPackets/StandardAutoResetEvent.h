@@ -5,7 +5,7 @@
 #include <mutex>
 #include <condition_variable>
 
-class StandardAutoResetEvent : IAmAutoResetEvent {
+class StandardAutoResetEvent : public IAmAutoResetEvent {
 public:
 	void Set();
 	void Wait();

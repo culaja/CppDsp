@@ -2,7 +2,7 @@
 
 #include "MutexGuard.h"
 
-PacketQueue::PacketQueue(IAmMutex& mutex): _mutex(mutex) {
+PacketQueue::PacketQueue(IAmMutex& mutex, IAmAutoResetEvent& autoResetEvent): _mutex(mutex), _autoResetEvent(autoResetEvent) {
 }
 
 void PacketQueue::Push(const Packet& packet) {
@@ -12,6 +12,8 @@ void PacketQueue::Push(const Packet& packet) {
 	for (std::vector<float>::iterator it  = packetBuffer.begin(); it < packetBuffer.end(); ++it) {
 		_queue.push(*it);
 	}
+
+	_autoResetEvent.Set();
 }
 
 Packet PacketQueue::WaitForPacketOfSize(int packetSize) {
@@ -32,7 +34,7 @@ Packet PacketQueue::WaitForPacketOfSize(int packetSize) {
 		}
 
 		if (waitForTheQueue) {
-
+			_autoResetEvent.Wait();
 		}
 	}
 

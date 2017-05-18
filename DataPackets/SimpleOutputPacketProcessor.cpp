@@ -3,5 +3,10 @@
 #include <iostream>
 
 void SimpleOutputPacketProcessor::Process(const Packet& packet) {
-	std::cout << "Here is a new packet!" << std::endl;
+	std::cout << "Here is a new packet of size: " << packet.GetSize() << "." << std::endl;
+	for (int k = 0; k < packet.GetSize(); k += 2) {
+		float r = packet[k];
+		float i = packet[k + 1];
+		std::cout << "\t" << r << " + " << i << "i" << std::endl;
+	}
 }

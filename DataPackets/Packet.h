@@ -13,6 +13,8 @@ public:
 	size_t GetSize() const;
 
 	const std::vector<float> GetBuffer() const;
+
+	float operator[](int index) const;
 };
 
 #endif

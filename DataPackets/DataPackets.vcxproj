@@ -127,7 +127,6 @@
     <ClInclude Include="IAmPacketGenerator.h" />
     <ClInclude Include="IAmPacketProcessor.h" />
     <ClInclude Include="PacketQueue.h" />
-    <ClInclude Include="PacketSizeNotAlignedWithFloatException.h" />
     <ClInclude Include="SimpleOutputPacketProcessor.h" />
     <ClInclude Include="StandardAutoResetEvent.h" />
     <ClInclude Include="StandardMutex.h" />
