@@ -17,7 +17,7 @@ Packet FloatNumberSequenceGenerator::GenerateRandomLength() {
 		packetBuffer.push_back(newFloat);
 	}
 
-	std::cout << "Generated " << packetSize << "float numbers!" << std::endl;
+	std::cout << "Generated " << packetSize << " float numbers!" << std::endl;
 	return Packet(packetBuffer);
 }
 
