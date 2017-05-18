@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cpptest.h>
-#include "ConsumerProducerTest.h"
+#include "MainTestHarness.h"
 
 #define RUN_MAIN_TEST
 
@@ -87,7 +87,7 @@ int
 main(int argc, char* argv[])
 {
 #ifdef RUN_MAIN_TEST
-	ConsumerProducerTest test = ConsumerProducerTest();
+	MainTestHarness& test = MainTestHarness();
 	return test.Run(argc, argv);
 #else
 	return run_tests(argc, argv);

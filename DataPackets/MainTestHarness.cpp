@@ -1,4 +1,4 @@
-#include "ConsumerProducerTest.h"
+#include "MainTestHarness.h"
 
 #include "PacketQueue.h"
 #include "Utilities/StandardMutex.h"
@@ -33,7 +33,7 @@ void consumerWorker(PacketQueue* packetQueuePointer) {
 	}
 }
 
-int ConsumerProducerTest::Run(int argc, char* argv[]) {
+int MainTestHarness::Run(int argc, char* argv[]) {
 	PacketQueue& packetQueue = PacketQueue(StandardMutex(), StandardAutoResetEvent());
 
 	std::thread producer = std::thread(producerWorker, &packetQueue);

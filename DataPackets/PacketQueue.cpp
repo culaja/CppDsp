@@ -8,9 +8,8 @@ PacketQueue::PacketQueue(IAmMutex& mutex, IAmAutoResetEvent& autoResetEvent): _m
 void PacketQueue::Push(const Packet& packet) {
 	MutexGuard guard = MutexGuard(_mutex);
 
-	std::vector<float> packetBuffer = packet.GetBuffer();
-	for (std::vector<float>::iterator it  = packetBuffer.begin(); it < packetBuffer.end(); ++it) {
-		_queue.push(*it);
+	for (int i = 0; i < packet.GetSize(); ++i) {
+		_queue.push(packet[i]);
 	}
 
 	_autoResetEvent.Set();

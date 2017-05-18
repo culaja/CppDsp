@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="ConsumerProducerTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="PacketQueue.cpp" />
@@ -20,9 +19,9 @@
     <ClCompile Include="PacketProcessors\SimpleOutputPacketProcessor.cpp">
       <Filter>PacketProcessors</Filter>
     </ClCompile>
+    <ClCompile Include="MainTestHarness.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConsumerProducerTest.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="PacketQueue.h" />
     <ClInclude Include="Utilities\IAmAutoResetEvent.h">
@@ -52,6 +51,7 @@
     <ClInclude Include="PacketProcessors\IAmPacketProcessor.h">
       <Filter>PacketProcessors</Filter>
     </ClInclude>
+    <ClInclude Include="MainTestHarness.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">
