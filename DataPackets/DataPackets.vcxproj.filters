@@ -1,102 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\PacketProcessors">
-      <UniqueIdentifier>{6de2d9b4-0e10-4c2e-b6b6-7bde7c110b62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\PacketGenerators">
-      <UniqueIdentifier>{25beee04-792e-40b9-9393-ce6c54d082d3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\PacketGenerators">
-      <UniqueIdentifier>{1c15fbfc-6c07-4233-8b14-7e7258714778}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\PacketProcessors">
-      <UniqueIdentifier>{6fdda04f-cbe3-47f0-82df-e61ccc2f9ea9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Utilities">
-      <UniqueIdentifier>{7d54dbcb-36f2-48ad-938f-6a0d89c9b814}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Utilities">
-      <UniqueIdentifier>{4244f1db-10ee-496b-ba30-630a19057f92}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="ConsumerProducerTest.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="PacketQueue.cpp" />
+    <ClCompile Include="Utilities\MutexGuard.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\StandardAutoResetEvent.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\StandardMutex.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketGenerators\FloatNumberSequenceGenerator.cpp">
+      <Filter>PacketGenerators</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketProcessors\SimpleOutputPacketProcessor.cpp">
+      <Filter>PacketProcessors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Packet.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ConsumerProducerTest.h" />
+    <ClInclude Include="Packet.h" />
+    <ClInclude Include="PacketQueue.h" />
+    <ClInclude Include="Utilities\IAmAutoResetEvent.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="IAmPacketProcessor.h">
-      <Filter>Header Files\PacketProcessors</Filter>
+    <ClInclude Include="Utilities\IAmMutex.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleOutputPacketProcessor.h">
-      <Filter>Header Files\PacketProcessors</Filter>
+    <ClInclude Include="Utilities\MutexGuard.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="FloatNumberSequenceGenerator.h">
-      <Filter>Header Files\PacketGenerators</Filter>
+    <ClInclude Include="Utilities\StandardAutoResetEvent.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="IAmPacketGenerator.h">
-      <Filter>Header Files\PacketGenerators</Filter>
+    <ClInclude Include="Utilities\StandardMutex.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="PacketQueue.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="PacketGenerators\IAmPacketGenerator.h">
+      <Filter>PacketGenerators</Filter>
     </ClInclude>
-    <ClInclude Include="IAmMutex.h">
-      <Filter>Header Files\Utilities</Filter>
+    <ClInclude Include="PacketGenerators\FloatNumberSequenceGenerator.h">
+      <Filter>PacketGenerators</Filter>
     </ClInclude>
-    <ClInclude Include="StandardMutex.h">
-      <Filter>Header Files\Utilities</Filter>
+    <ClInclude Include="PacketProcessors\SimpleOutputPacketProcessor.h">
+      <Filter>PacketProcessors</Filter>
     </ClInclude>
-    <ClInclude Include="MutexGuard.h">
-      <Filter>Header Files\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="IAmAutoResetEvent.h">
-      <Filter>Header Files\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="StandardAutoResetEvent.h">
-      <Filter>Header Files\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsumerProducerTest.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="PacketProcessors\IAmPacketProcessor.h">
+      <Filter>PacketProcessors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FloatNumberSequenceGenerator.cpp">
-      <Filter>Source Files\PacketGenerators</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleOutputPacketProcessor.cpp">
-      <Filter>Source Files\PacketProcessors</Filter>
-    </ClCompile>
-    <ClCompile Include="Packet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StandardMutex.cpp">
-      <Filter>Source Files\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="MutexGuard.cpp">
-      <Filter>Source Files\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="PacketQueue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StandardAutoResetEvent.cpp">
-      <Filter>Source Files\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsumerProducerTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{4fe14c8f-7682-4fff-8ff5-d7e42663e688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PacketGenerators">
+      <UniqueIdentifier>{38182388-a6a8-44de-8184-dd072288609a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PacketProcessors">
+      <UniqueIdentifier>{b75f7695-876a-4a90-bfa4-ff34e3f399ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
