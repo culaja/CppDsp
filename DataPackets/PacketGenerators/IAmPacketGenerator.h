@@ -3,6 +3,9 @@
 
 #include "../Packet.h"
 
+/*
+	Each PacketGenerator implementation have to implement this interface.
+*/
 class IAmPacketGenerator {
 public:
 	virtual Packet GenerateRandomLength() = 0;

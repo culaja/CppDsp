@@ -2,7 +2,7 @@
 #include <cpptest.h>
 #include "MainTestHarness.h"
 
-#define RUN_MAIN_TEST
+#define RUN_MAIN_TEST_HARNESS // Comment this line if you want to run unit tests, otherwise this will trigger MainTestHarness to execute
 
 using namespace std;
 
@@ -86,7 +86,7 @@ int run_tests(int argc, char* argv[]) {
 int
 main(int argc, char* argv[])
 {
-#ifdef RUN_MAIN_TEST
+#ifdef RUN_MAIN_TEST_HARNESS
 	MainTestHarness& test = MainTestHarness();
 	return test.Run(argc, argv);
 #else

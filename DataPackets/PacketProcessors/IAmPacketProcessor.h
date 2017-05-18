@@ -3,6 +3,9 @@
 
 #include "../Packet.h"
 
+/*
+Each PacketProcessor implementation have to implement this interface.
+*/
 class IAmPacketProcessor {
 public:
 	virtual void Process(const Packet& packet) = 0;

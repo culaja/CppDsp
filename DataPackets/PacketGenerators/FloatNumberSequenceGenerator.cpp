@@ -4,7 +4,8 @@
 #include <time.h>
 #include <iostream>
 
-FloatNumberSequenceGenerator::FloatNumberSequenceGenerator(size_t maximalPacketSize): _maximalPacketSize(maximalPacketSize), _maximalNumberSize(10) {
+FloatNumberSequenceGenerator::FloatNumberSequenceGenerator(size_t maximalPacketSize)
+	: _maximalPacketSize(maximalPacketSize), _maximalNumberSize(10) {
 	srand((unsigned int)time(NULL));
 }
 

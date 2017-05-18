@@ -8,9 +8,18 @@
 #include <thread>
 #include <windows.h>
 
+/*
+	MainTestHarness starts package producer and consumer threads. Both threads use
+	the same PacketQueue object for communication. Threads will execute forever.
+*/
+
 const size_t MAXIMAL_INPUT_PACKET_SIZE = 10; // Maximum 100 floats can be created in input packet
 const size_t FIXED_PACKET_SIZE = 20; // Each output packet will contain 10 floats
 
+/*
+	Each producer's cycle uses FloatNumberSequenceGenerator to generate package of random size and pushes
+	generated packet to the queue.
+*/
 void producerWorker(PacketQueue* packetQueuePointer) {
 	PacketQueue& packetQueue = *packetQueuePointer;
 
@@ -23,6 +32,10 @@ void producerWorker(PacketQueue* packetQueuePointer) {
 	}
 }
 
+/*
+	Each consumer's cycle extracts the packet of specified size from the queue (or waits f there is no
+	enough data) and processes the extracted packet using SimpleOutputPacketProcessor.
+*/
 void consumerWorker(PacketQueue* packetQueuePointer) {
 	PacketQueue& packetQueue = *packetQueuePointer;
 
