@@ -118,12 +118,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Packet.h" />
     <ClInclude Include="FloatNumberSequenceGenerator.h" />
     <ClInclude Include="IAmPacketGenerator.h" />
+    <ClInclude Include="IAmPacketProcessor.h" />
+    <ClInclude Include="PacketSizeNotAlignedWithFloatException.h" />
+    <ClInclude Include="SimpleOutputPacketProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FloatNumberSequenceGenerator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="SimpleOutputPacketProcessor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

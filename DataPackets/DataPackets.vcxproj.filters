@@ -13,12 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\PacketProcessors">
+      <UniqueIdentifier>{6de2d9b4-0e10-4c2e-b6b6-7bde7c110b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PacketGenerators">
+      <UniqueIdentifier>{25beee04-792e-40b9-9393-ce6c54d082d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PacketGenerators">
+      <UniqueIdentifier>{1c15fbfc-6c07-4233-8b14-7e7258714778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PacketProcessors">
+      <UniqueIdentifier>{6fdda04f-cbe3-47f0-82df-e61ccc2f9ea9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IAmPacketGenerator.h">
+    <ClInclude Include="Packet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IAmPacketProcessor.h">
+      <Filter>Header Files\PacketProcessors</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleOutputPacketProcessor.h">
+      <Filter>Header Files\PacketProcessors</Filter>
+    </ClInclude>
     <ClInclude Include="FloatNumberSequenceGenerator.h">
+      <Filter>Header Files\PacketGenerators</Filter>
+    </ClInclude>
+    <ClInclude Include="IAmPacketGenerator.h">
+      <Filter>Header Files\PacketGenerators</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketSizeNotAlignedWithFloatException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -27,6 +51,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FloatNumberSequenceGenerator.cpp">
+      <Filter>Source Files\PacketGenerators</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleOutputPacketProcessor.cpp">
+      <Filter>Source Files\PacketProcessors</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
