@@ -49,8 +49,8 @@ void consumerWorker(PacketQueue* packetQueuePointer) {
 int MainTestHarness::Run(int argc, char* argv[]) {
 	PacketQueue& packetQueue = PacketQueue(StandardMutex(), StandardAutoResetEvent());
 
-	std::thread producer = std::thread(producerWorker, &packetQueue);
-	std::thread consumer = std::thread(consumerWorker, &packetQueue);
+	std::thread producer(producerWorker, &packetQueue);
+	std::thread consumer(consumerWorker, &packetQueue);
 
 	producer.join();
 	consumer.join();

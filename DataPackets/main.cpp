@@ -90,7 +90,7 @@ int
 main(int argc, char* argv[])
 {
 #ifdef RUN_MAIN_TEST_HARNESS
-	MainTestHarness& test = MainTestHarness();
+	MainTestHarness test;
 	return test.Run(argc, argv);
 #else
 	return run_tests(argc, argv);
